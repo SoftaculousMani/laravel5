@@ -20,7 +20,7 @@
         "spatie/laravel-ignition": "^1.0"
     },
     "config": {
-        "cache-dir": "E:/Program Files/EasyPHP 3.0/www/laravel5/cache"
+        "cache-dir": "/var/www/vhosts/laravel.nuftp.com/httpdocs/cache"
     },
     "autoload": {
         "psr-4": {
@@ -40,13 +40,13 @@
             "@php artisan package:discover --ansi"
         ],
         "post-update-cmd": [
-            "@"E:\Program artisan vendor:publish --tag=laravel-assets --ansi --force"
+            "@/usr/bin/php artisan vendor:publish --tag=laravel-assets --ansi --force"
         ],
         "post-root-package-install": [
-            "@"E:\Program -r \"file_exists('.env') || copy('.env.example', '.env');\""
+            "@/usr/bin/php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
         "post-create-project-cmd": [
-            "@"E:\Program artisan key:generate --ansi"
+            "@/usr/bin/php artisan key:generate --ansi"
         ]
     },
     "extra": {
